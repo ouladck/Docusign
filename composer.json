@@ -3,8 +3,8 @@
     "description": "A clone of tjphippen/docusign with updates and some bugs fixs",
     "type": "library",
     "require": {
-        "php": "5.6.0",
-        "illuminate/support": "5.1",
+        "php": ">=5.6.0",
+        "illuminate/support": "~5.1",
         "guzzlehttp/guzzle": "^6.2",
         "laravel/framework": "5.*"
     },
