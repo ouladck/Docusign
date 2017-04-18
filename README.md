@@ -1,9 +1,6 @@
 # DocuSign for Laravel 5
 
-[![Latest Stable Version](https://poser.pugx.org/Karim88/docusign/v/stable.png)](https://packagist.org/packages/Karim88/docusign) [![Total Downloads](https://poser.pugx.org/Karim88/docusign/downloads.png)](https://packagist.org/packages/Karim88/docusign)
-- [Packagist](https://packagist.org/packages/Karim88/docusign)
-- [GitHub](https://github.com/Karim88/docusign)
-
+A clone of [tjphippen/docusign](github.com/tjphippen/docusign) with updates and some bugs fixs
 ----------
 ## Installation
 Add the following to your `composer.json` file.
