@@ -6,7 +6,7 @@ A clone of [tjphippen/docusign](github.com/tjphippen/docusign) with updates and 
 Add the following to your `composer.json` file.
 
 ~~~
-"karim88/docusign": "stable"
+"karim88/docusign": "dev-master"
 ~~~
 
 Then run `composer install` or `composer update` to download and install.
