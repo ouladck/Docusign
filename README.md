@@ -1,15 +1,15 @@
 # DocuSign for Laravel 5
 
-[![Latest Stable Version](https://poser.pugx.org/tjphippen/docusign/v/stable.png)](https://packagist.org/packages/tjphippen/docusign) [![Total Downloads](https://poser.pugx.org/tjphippen/docusign/downloads.png)](https://packagist.org/packages/tjphippen/docusign)
-- [Packagist](https://packagist.org/packages/tjphippen/docusign)
-- [GitHub](https://github.com/tjphippen/docusign)
+[![Latest Stable Version](https://poser.pugx.org/Karim88/docusign/v/stable.png)](https://packagist.org/packages/Karim88/docusign) [![Total Downloads](https://poser.pugx.org/Karim88/docusign/downloads.png)](https://packagist.org/packages/Karim88/docusign)
+- [Packagist](https://packagist.org/packages/Karim88/docusign)
+- [GitHub](https://github.com/Karim88/docusign)
 
 ----------
 ## Installation
 Add the following to your `composer.json` file.
 
 ~~~
-"tjphippen/docusign": "0.3.*@dev"
+"Karim88/docusign": "0.3.*@dev"
 ~~~
 
 Then run `composer install` or `composer update` to download and install.
@@ -18,7 +18,7 @@ You'll then need to register the service provider in your `config/app.php` file 
 
 ```php
 'providers' => array(
-    Tjphippen\Docusign\DocusignServiceProvider::class,
+    Karim88\Docusign\DocusignServiceProvider::class,
 )
 ```
 
@@ -27,7 +27,7 @@ If you have issues simply add it manually to your aliases array
 
 ```php
 'aliases' => array(
-    'Docusign'  => Tjphippen\Docusign\Facades\Docusign::class,
+    'Docusign'  => Karim88\Docusign\Facades\Docusign::class,
 )
 ```
 
@@ -177,8 +177,8 @@ Docusign::createEnvelope(array(
    'emailSubject'   => 'Demo Envelope Subject', // Subject of email sent to all recipients
    'status'         => 'created', // created = draft ('sent' will send the envelope!)
    'templateRoles'  => array(
-        ['name'     => 'TJ Phippen',
-         'email'    => 'tj@tjphippen.com',
+        ['name'     => 'John Snow',
+         'email'    => 'john@snow.com',
          'roleName' => 'Contractor',
          'clientUserId'  => 1],
         ['name'     => 'Jane Someone',
@@ -204,8 +204,8 @@ Returns embeded signing URL. [Reference] (https://www.docusign.com/p/RESTAPIGuid
 
 ```php
 Docusign::createRecipientView($envelopeId, array(
-    'userName' => 'TJ Phippen',
-    'email' => 'tj@tjphippen.com',
+    'userName' => 'John Snow',
+    'email' => 'john@snow.com',
     'AuthenticationMethod' => 'email',
     'clientUserId' => 1, // Must create envelope with this ID
     'returnUrl' => 'http://your-site.tdl/returningUrl'
