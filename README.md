@@ -233,14 +233,7 @@ Docusign::deleteEnvelope($envelopeId);
 
 ## Change Log
 
-#### v0.2.0
-
-- Updated Guzzle dependancy & namespace
-
-#### v0.2.0
-
-- Added trait
-
 #### v0.1.0
 
-- Released
+- Fixing ``` Call to undefined method Illuminate\Foundation\Application::bindShared() ```
+- Adding Download a envelope or get it uri
