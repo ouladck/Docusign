@@ -84,6 +84,12 @@ class Docusign
         return $tabs = $this->rawJson($request);
     }
 
+    public function updateRecipients($envelopeId, $data)
+    {
+        $request = $this->client->put('envelopes/' . $envelopeId . '/recipients', ['json' => $data]);
+        return $tabs = $this->rawJson($request);
+    }
+
     public function deleteEnvelope($envelopeId) {
         $data = array('envelopeIds' => array($envelopeId));
         $request = $this->client->put('folders/recyclebin', ['json' => $data]);

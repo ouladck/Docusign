@@ -215,6 +215,10 @@ Docusign::createRecipientView($envelopeId, array(
 Docusign::updateEnvelope($envelopeId, ['status' => 'sent']);
 ```
 
+#### Updates recipients in a draft envelope or corrects recipient information for an in process envelope.
+```php
+Docusign::updateRecipients($envelopeId);
+```
 #### Void Envelope
 
 ```php
@@ -237,3 +241,4 @@ Docusign::deleteEnvelope($envelopeId);
 
 - Fixing ``` Call to undefined method Illuminate\Foundation\Application::bindShared() ```
 - Adding Download a envelope or get it uri
+- Adding Update Envelope Recipients
