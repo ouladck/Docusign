@@ -217,7 +217,17 @@ Docusign::updateEnvelope($envelopeId, ['status' => 'sent']);
 
 #### Updates recipients in a draft envelope or corrects recipient information for an in process envelope.
 ```php
-Docusign::updateRecipients($envelopeId);
+Docusign::updateRecipients($envelopeId, [
+    "signers" => [
+        [
+            'recipientId'  => '1',
+            'routingOrder' => '1',
+            'name'         => 'John Snow',
+            'email'        => 'john@snow.com',
+            'roleName'     => 'Client'
+        ]
+    ]
+]);
 ```
 #### Void Envelope
 
