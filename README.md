@@ -57,12 +57,12 @@ The configuration file will be published to `config/docusign.php` which must be 
 ...
 ```
 
-or set account dynamicly by changing `dynamic` value to '1' in `config/docusign.php`
+or set account informations dynamically by changing `dynamic` value to '1' in `config/docusign.php`
 ```php
 
     'dynamic' => '1',
 ```
-and set account information in a session
+and set account informations in a session
 ```php
 session(['integrator_key' => $your_integrator_key])
 session(['email' => $your_email])
@@ -273,3 +273,4 @@ Docusign::deleteEnvelope($envelopeId);
 - Fixing ``` Call to undefined method Illuminate\Foundation\Application::bindShared() ```
 - Adding Download a envelope or get it uri
 - Adding Update Envelope Recipients
+- Setting Account Information Dynamically
