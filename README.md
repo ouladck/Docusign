@@ -57,6 +57,19 @@ The configuration file will be published to `config/docusign.php` which must be 
 ...
 ```
 
+or set account dynamicly by changing `dynamic` value to '1' in `config/docusign.php`
+```php
+
+    'dynamic' => '1',
+```
+and set account information in a session
+```php
+session(['integrator_key' => $your_integrator_key])
+session(['email' => $your_email])
+session(['password' => $your_password])
+```
+
+
 ## Examples
 
 #### Get List of Users
@@ -215,7 +228,15 @@ Docusign::createRecipientView($envelopeId, array(
 Docusign::updateEnvelope($envelopeId, ['status' => 'sent']);
 ```
 
-#### Updates recipients in a draft envelope or corrects recipient information for an in process envelope.
+#### Download a Envelope
+To get only the download url set `$download=false`,
+by default the method download the document.
+
+```php
+Docusign::downloadDocuments($envelopeId, $download=true)
+```
+
+#### Updates Recipients in a Draft Envelope or Corrects Recipient Information for an in Process Envelope.
 ```php
 Docusign::updateRecipients($envelopeId, [
     "signers" => [

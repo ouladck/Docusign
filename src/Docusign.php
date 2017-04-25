@@ -10,7 +10,14 @@ class Docusign
 
     function __construct($config)
     {
-        $this->config = $config;
+        if($config['dynamic'] == 1 and (session('integrator_key') == '' or session('email') == '' or session('password') == '' )){
+            $config['dynamic'] = 0;
+        }
+        $this->config = ($config['dynamic']) ? [
+            'integrator_key' => session('integrator_key'),
+            'email' => session('email'),
+            'password' => session('password'),
+            ] : $config;
         $this->baseUrl = 'https://' . $config['environment']. '.docusign.net/restapi/' . $config['version'] . '/accounts/' . $config['account_id'] . '/';
         $this->client = new Client(['base_uri' => $this->baseUrl, 'headers' => $this->getHeaders()]);
     }
