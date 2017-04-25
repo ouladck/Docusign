@@ -64,7 +64,8 @@ or set account informations dynamically by changing `dynamic` value to '1' in `c
 ```
 and set account informations in a session
 ```php
-session(['integrator_key' => $your_integrator_key])
+session(['integrator_key' => $your_integrator_key]
+session(['account_id' => $your_account_id]))
 session(['email' => $your_email])
 session(['password' => $your_password])
 ```
