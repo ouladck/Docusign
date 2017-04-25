@@ -15,10 +15,11 @@ class Docusign
         }
         $this->config = ($config['dynamic']) ? [
             'integrator_key' => session('integrator_key'),
+            'account_id' => session('account_id'),
             'email' => session('email'),
             'password' => session('password'),
             ] : $config;
-        $this->baseUrl = 'https://' . $config['environment']. '.docusign.net/restapi/' . $config['version'] . '/accounts/' . $config['account_id'] . '/';
+        $this->baseUrl = 'https://' . $config['environment']. '.docusign.net/restapi/' . $config['version'] . '/accounts/' . $this->config['account_id'] . '/';
         $this->client = new Client(['base_uri' => $this->baseUrl, 'headers' => $this->getHeaders()]);
     }
 
